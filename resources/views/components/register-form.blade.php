@@ -11,13 +11,13 @@
     <div class="input-group">
         <span class="input-group-text" id="basic-addon1">Email</span>
         <input id="email" type="email" name="email" class="form-control" value="{{ old('email') }}" required
-            autocomplete="email" aria-label="Email" aria-describedby="basic-addon1">
+            aria-label="Email" aria-describedby="basic-addon1">
     </div>
 
     <div class="input-group">
         <span class="input-group-text" id="basic-addon1">Password</span>
-        <input id="password" type="password" name="password" class="form-control" required
-            autocomplete="current-password" aria-label="Password" aria-describedby="basic-addon1">
+        <input id="password" type="password" name="password" class="form-control" required aria-label="Password"
+            aria-describedby="basic-addon1">
     </div>
 
     <div class="input-group">

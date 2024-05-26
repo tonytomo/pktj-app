@@ -13,9 +13,9 @@
 
 <body class="vh-100 bg-light">
     <x-navigation-bar />
-    <div class="h-100 position-relative d-flex">
+    <div class="h-100 position-relative d-flex flex-lg-row flex-column">
         <div class="d-flex flex-column gap-2 justify-content-center align-items-center flex-grow-1">
-            <h1 class="mb-1 border-bottom border-success text-center text-success fs-1 fw-bold">PKTJ</h1>
+            <h1 class="mt-2 pt-5 border-bottom border-success text-center text-success fs-1 fw-bold">PKTJ</h1>
             <p class="text-center text-success fs-5">Sistem Peminjaman Aset</p>
         </div>
         <div class="p-4 h-100 bg-white shadow-lg">

@@ -14,43 +14,26 @@
     <x-navigation-bar />
 
     <div class="h-100">
-        {{-- Create card of user if admin, aset, profil --}}
         <div class="container h-100">
-            <div class="h-100 d-flex flex-row justify-content-center align-items-center">
+            <div class="h-100 d-flex flex-row gap-4 justify-content-center align-items-center">
                 @if (Auth::user() && Auth::user()->role == 'admin')
-                    <div class="col-4">
-                        <div class="card mt-4">
-                            <div class="card-body">
-                                <h5 class="card-title">Pengguna</h5>
-                                <p class="card-text">Kelola pengguna</p>
-                                <a href="{{ route('users.list') }}" class="btn btn-primary">Lihat</a>
-                            </div>
+                    <div class="card h-50 w-25">
+                        <div class="card-body d-flex flex-column justify-content-end align-items-stretch">
+                            <h5 class="card-title">Pengguna</h5>
+                            <p class="card-text">Kelola pengguna</p>
+                            <a href="{{ route('users.list') }}" class="btn btn-success">Lihat</a>
                         </div>
                     </div>
                 @endif
-                <div class="col-4">
-                    <div class="card mt-4">
-                        <div class="card-body">
-                            <h5
-                                class="card-title
-                                @if (Auth::user() && Auth::user()->role == 'admin') mt-4 @endif">
-                                Aset</h5>
-                            <p class="card-text">Kelola aset</p>
-                            <a href="{{ route('product.list') }}" class="btn btn-primary">Lihat</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="card mt-4">
-                        <div class="card-body">
-                            <h5
-                                class="card-title
 
+                <div class="card h-50 w-25">
+                    <div class="card-body d-flex flex-column justify-content-end align-items-stretch">
+                        <h5
+                            class="card-title
                                 @if (Auth::user() && Auth::user()->role == 'admin') mt-4 @endif">
-                                Profil</h5>
-                            <p class="card-text">Lihat profil</p>
-                            <a href="{{ route('users.detail', Auth::user()->id) }}" class="btn btn-primary">Lihat</a>
-                        </div>
+                            Aset</h5>
+                        <p class="card-text">Lihat daftar aset</p>
+                        <a href="{{ route('product.list') }}" class="btn btn-success">Lihat</a>
                     </div>
                 </div>
             </div>

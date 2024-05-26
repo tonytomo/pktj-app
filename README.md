@@ -20,7 +20,7 @@ This is a simple asset management system that allows users to manage their asset
 
 -   [x] Fix models
 -   [x] Fix controllers
--   [ ] Fix views
+-   [x] Fix views
 -   [x] Fix routes
 -   [x] Fix seeder
--   [ ] Fix components
+-   [x] Fix components

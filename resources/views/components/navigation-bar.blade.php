@@ -11,20 +11,10 @@
                     <a class="nav-link link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
                         href="{{ route('home') }}">Beranda</a>
                 </li>
-                @if (Auth::user() && Auth::user()->role == 'admin')
-                    <li class="nav-item">
-                        <a class="nav-link link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                            href="{{ route('users.list') }}">Pengguna</a>
-                    </li>
-                @endif
                 @if (Auth::check())
                     <li class="nav-item">
                         <a class="nav-link link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
                             href="{{ route('app') }}">Dasbor</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                            href="{{ route('product.list') }}">Aset</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
@@ -41,7 +31,7 @@
                     </li>
                 @endif
                 @if (Auth::user() && Auth::user()->role == 'admin')
-                    <li class="nav-item ml-4 border border-light rounded px-1 py-0">
+                    <li class="nav-item border border-light rounded px-1 m-0">
                         <h3>ADMIN</h3>
                     </li>
                 @endif
