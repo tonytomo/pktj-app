@@ -12,9 +12,12 @@ class LoginController extends Controller
     /**
      * Show the form for login.
      */
-    public function showLoginForm(): View
+    public function show(): View
     {
-        return view('login');
+        return view('form', [
+            'title' => 'Masuk',
+            'type' => 'login'
+        ]);
     }
 
     /**
@@ -26,16 +29,24 @@ class LoginController extends Controller
             'email' => ['required', 'email'],
             'password' => ['required'],
         ], [
-            'email.required' => 'Email is required',
-            'email.email' => 'Email is invalid',
-            'password.required' => 'Password is required',
+            'email.required' => 'Email belum diisi',
+            'email.email' => 'Email tidak valid',
+            'password.required' => 'Password belum diisi',
         ]);
 
         if (auth()->attempt($request->only('email', 'password'))) {
-            return redirect()->route('app')->with('message', 'You are now logged in');
+            return redirect()->route('home')->with([
+                'type' => 'success',
+                'message' => 'Kamu berhasil login'
+            ]);
         }
 
-        return back()->with('message', 'Email or password is incorrect');
+        return back()->with(
+            [
+                'type' => 'danger',
+                'message' => 'Email atau password salah',
+            ]
+        )->withInput($request->all());
     }
 
     /**
@@ -45,6 +56,9 @@ class LoginController extends Controller
     {
         auth()->logout();
 
-        return redirect()->route('login')->with('message', 'You have been logged out');
+        return redirect()->route('login')->with([
+            'type' => 'success',
+            'message' => 'Kamu berhasil logout',
+        ]);
     }
 }

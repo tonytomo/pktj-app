@@ -19,8 +19,8 @@ This is a simple asset management system that allows users to manage their asset
 ## Todo
 
 -   [x] Fix models
--   [ ] Fix controllers
+-   [x] Fix controllers
 -   [ ] Fix views
 -   [x] Fix routes
--   [ ] Fix seeder
+-   [x] Fix seeder
 -   [ ] Fix components

@@ -1,3 +1,5 @@
 <div>
-    <!-- Happiness is not something readymade. It comes from your own actions. - Dalai Lama -->
+    <footer class="bg-dark text-light text-center p-3">
+        <p>&copy; 2024 PKTJ</p>
+    </footer>
 </div>

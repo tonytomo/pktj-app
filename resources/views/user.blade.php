@@ -14,7 +14,7 @@
                 <p>Name: {{ $user->name }}</p>
                 <p>Email: {{ $user->email }}</p>
                 <p>Role: {{ $user->role }}</p>
-                <a href="{{ url('user/' . $user->id) }}">
+                <a href="{{ route('users.detail', $user->id) }}">
                     <button>
                         {{ __('View') }}
                     </button>

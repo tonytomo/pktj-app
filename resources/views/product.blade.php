@@ -46,9 +46,9 @@
                                 </button>
                             </a>
                         @endif
-                        <a href="{{ route('product.show', $product->id) }}">
+                        <a href="{{ route('product.detail', $product->id) }}">
                             <button>
-                                {{ __('Show') }}
+                                {{ __('Detail') }}
                             </button>
                         </a>
                     </td>
