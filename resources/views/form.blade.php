@@ -12,15 +12,16 @@
 </head>
 
 <body class="vh-100 bg-light">
-    <x-navigation-bar />
     <div class="h-100 position-relative d-flex flex-lg-row flex-column">
-        <div class="d-flex flex-column gap-2 justify-content-center align-items-center flex-grow-1">
-            <h1 class="mt-2 pt-5 border-bottom border-success text-center text-success fs-1 fw-bold">PKTJ</h1>
-            <p class="text-center text-success fs-5">Sistem Peminjaman Aset</p>
+        <div class="w-100 d-flex flex-column gap-2 justify-content-center align-items-center">
+            <h1 class="mt-2 pt-5 border-bottom text-center text-success fs-1 fw-bold">PKTJ</h1>
+            <p class="text-center fs-5">Sistem Peminjaman Aset</p>
         </div>
-        <div class="p-4 h-100 bg-white shadow-lg">
-            <div class="h-100 d-flex flex-column justify-content-center">
-                <h1 class="mb-4 text-center fs-3">{{ $title }}</h1>
+        <div class="p-4 w-100 bg-white shadow-lg">
+            <div class="mw-100 h-100 d-flex flex-column align-items-start justify-content-center">
+                <a href="{{ route('home') }}" class="btn btn-secondary">Beranda</a>
+                <hr class="w-100">
+                <h1 class="mb-4 fs-3">{{ $title }}</h1>
 
                 @if ($type === 'login')
                     <x-login-form />
@@ -39,7 +40,6 @@
             </div>
         </div>
     </div>
-    <x-footer />
 </body>
 
 </html>

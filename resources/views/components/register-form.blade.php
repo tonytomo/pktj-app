@@ -1,5 +1,5 @@
 <form method="POST" action="{{ route('register') }}"
-    class="d-flex flex-column align-items-center justify-content-center gap-3">
+    class="d-flex flex-column align-items-start justify-content-center gap-3">
     @csrf
 
     <div class="input-group">

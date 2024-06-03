@@ -1,5 +1,5 @@
 <form method="POST" action="{{ route('login') }}"
-    class="d-flex flex-column align-items-center justify-content-center gap-3">
+    class="w-100 d-flex flex-column align-items-start justify-content-center gap-3">
     @csrf
 
     <div class="input-group">
@@ -14,11 +14,9 @@
             autocomplete="current-password" aria-label="Password" aria-describedby="basic-addon1">
     </div>
 
-    <div>
-        <button type="submit" class="btn btn-success">
-            {{ __('Masuk') }}
-        </button>
-    </div>
+    <button type="submit" class="btn btn-success">
+        {{ __('Masuk') }}
+    </button>
     <div>
         <a href="{{ route('register') }}"
             class="link-success link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">
